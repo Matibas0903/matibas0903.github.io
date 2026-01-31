@@ -1,0 +1,152 @@
+/* =========================
+   Variables de color
+========================= */
+:root {
+  --primary: #ff8c42;
+  /* naranja suave */
+  --primary-dark: #e6762e;
+  --dark: #1e1e1e;
+  --gray: #6c757d;
+  --bg-light: #f8f9fa;
+}
+
+/* =========================
+   Global
+========================= */
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background-color: var(--bg-light);
+  color: #212529;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  backdrop-filter: blur(8px);
+}
+
+.navbar-brand {
+  color: var(--primary) !important;
+}
+
+.nav-link {
+  color: #e0e0e0 !important;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+/* =========================
+   Hero
+========================= */
+section.bg-dark {
+  background: linear-gradient(135deg,
+      #1e1e1e,
+      #2a2a2a) !important;
+}
+
+section.bg-dark h1 {
+  color: #ffffff;
+}
+
+section.bg-dark .btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+section.bg-dark .btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* =========================
+   Cards
+========================= */
+.card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-img-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn-outline-primary {
+  --bs-btn-color: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--primary);
+  --bs-btn-hover-border-color: var(--primary);
+}
+
+/* =========================
+   Section titles
+========================= */
+section h2 {
+  font-weight: 700;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  background-color: var(--dark);
+}
+
+footer a {
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--primary) !important;
+}
+
+/* =========================
+   Utilities
+========================= */
+.shadow-soft {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.rounded-xl {
+  border-radius: 1.25rem;
+}
+
+.carousel img {
+  max-height: 400px;
+  object-fit: contain;
+  background-color: #000;
+}
