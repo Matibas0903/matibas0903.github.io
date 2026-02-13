@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesional Independiente</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap icons  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Whatsapp -->
+
+    <a href="https://api.whatsapp.com/send?phone=NumerodelCliente" class="btn-wsp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm" data-bs-theme="dark">
+
+        <div class="container">
+            <a class="navbar-brand" href="#">Dr. Nombre</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Refes">Referencias</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section id="inicio" class="hero py-5">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Imagen izquierda -->
+                <div class="col-md-6 text-center">
+                    <img src="gettyimages-924042074-612x612.jpg" class="hero-img img-fluid" alt="Imagen profesional">
+                </div>
+
+                <!-- Texto derecha -->
+                <div class="col-md-6 text-md-start text-center">
+                    <h1>Dr. Nombre Apellido</h1>
+                    <h4 class="text-muted">Especialidad Profesional</h4>
+                    <p>Acompañándote en tu bienestar y crecimiento personal.</p>
+                    <a href="https://wa.me/5491133603216?text=Hola,%20quiero%20coordinar%20un%20turno
+" class="btn btn-Turno mt-3" target="_blank">Solicitar turno</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SOBRE MI -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <p>
+                Texto descriptivo del profesional. Experiencia, enfoque y formación.
+            </p>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="Servicios" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Servicios</h2>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="card p-3 shadow-sm">
+                        <i class="fa-solid fa-user fa-2x mb-3"></i>
+                        <h5>Terapia individual</h5>
+                        <p>Descripción breve del servicio.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="ComoFunciona" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>¿Cómo funciona?</h2>
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h5>1. Contacto</h5>
+                    <p>Coordinamos una primera entrevista.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>2. Evaluación</h5>
+                    <p>Definimos objetivos.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>3. Proceso</h5>
+                    <p>Comenzamos el tratamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="Refes" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Testimonios</h2>
+            <p class="text-center">"Excelente profesional, muy recomendable."</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="FAQ" class="py-5 bg-light">
+        <div class="container">
+            <h2>Preguntas frecuentes</h2>
+
+            <div class="accordion" id="faq">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            ¿Cuánto dura cada sesión?
+                        </button>
+                    </h2>
+
+                    <div id="faq1" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            Aproximadamente 50 minutos.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center p-3">
+        © 2026 - Profesional Independiente
+    </footer>
+
+
+    <button id="btnArriba" title="Volver arriba">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+</body>
+
+</html>
