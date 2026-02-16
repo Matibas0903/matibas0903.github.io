@@ -1,0 +1,87 @@
+.hero {
+    position: relative;
+    background: url("imagen-fondo.jpg") center/cover no-repeat;
+    padding: 120px 0;
+    color: white;
+    overflow: hidden;
+}
+
+/* overlay oscuro para legibilidad */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* contenido arriba del overlay */
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 26px;
+    z-index: 1000;
+}
+
+.btn-wsp:hover {
+    background: white;
+    color: #25D366;
+}
+
+#btnArriba {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    display: none;
+    /* oculto al inicio */
+    background-color: #495D63;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+#btnArriba:hover {
+    background-color: #405257;
+}
+
+
+.boton-toggle {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.aparecer {
+    opacity: 1;
+}
+
+/* hover */
+#btn-ver-todos:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Local</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap icons  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- JS -->
+
+    <script src="script.js" defer></script>
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Mi Tienda</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-success ms-3" href="https://api.whatsapp.com/send?phone=NUMERO">
+                            WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="fw-bold">Nombre del Local</h1>
+            <p class="lead">Productos de calidad para vos</p>
+            <a href="#productos" class="btn btn-primary">Ver catálogo</a>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Catálogo</h2>
+
+            <div id="contenedor-productos" class="row g-4">
+
+
+            </div>
+            <div class="text-center mt-4 d-flex flex-column align-items-center gap-2">
+                <button id="btn-ver-todos" class="btn btn-outline-primary boton-toggle">
+                    Ver catálogo completo
+                </button>
+                <button id="btn-ver-menos" class="btn btn-outline-primary boton-toggle">
+                    Ocultar catálogo completo
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- UBICACION -->
+    <section id="ubicacion" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Dónde estamos</h2>
+            <iframe src="https://www.google.com/maps?q=Buenos+Aires&output=embed" width="100%" height="350"
+                style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://api.whatsapp.com/send?phone=NUMERO" class="btn-wsp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+
+    <button id="btnArriba" title="Volver arriba">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+
+</body>
+
+</html>
