@@ -417,7 +417,15 @@ window.addEventListener("keydown", (event) => {
 
     }, 1);
 });
-canvas.addEventListener("touchend", function (e) {
+
+canvas.addEventListener("touchstart", function(e){
+
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+
+}, { passive:false });
+
+canvas.addEventListener("touchend", function(e){
 
     if (!pacman) return;
 
@@ -426,6 +434,12 @@ canvas.addEventListener("touchend", function (e) {
 
     let dx = touchEndX - touchStartX;
     let dy = touchEndY - touchStartY;
+
+    let minSwipeDistance = 30; // evita falsos gestos
+
+    if (Math.abs(dx) < minSwipeDistance && Math.abs(dy) < minSwipeDistance){
+        return;
+    }
 
     if (Math.abs(dx) > Math.abs(dy)) {
 
@@ -445,7 +459,7 @@ canvas.addEventListener("touchend", function (e) {
 
     }
 
-});
+}, { passive:false });
 
 function startCountdown(seconds) {
 
