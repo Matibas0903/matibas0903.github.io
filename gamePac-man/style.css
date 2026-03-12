@@ -8,6 +8,73 @@
     align-items: center;
 }
 
+.modal-dialog.modal-500 {
+    max-width: 500px;
+}
+
+.modal-content {
+    background-color: #000000;
+    /* fondo negro */
+    border: 5px solid #00aaff;
+    /* borde azul estilo neón */
+    border-radius: 15px;
+    /* esquinas redondeadas */
+    box-shadow: 0 0 20px #00aaff;
+    /* efecto neón */
+}
+
+.modal-header,
+.modal-footer {
+    border-color: #00aaff;
+    background-color: #000000 !important;
+    color: white;
+}
+
+.modal-body-pacman {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+
+    color: #ffffff;
+}
+
+/* Botones estilo Pac-Man */
+.modal-footer .btn-primary {
+    background-color: #00aaff;
+    border: 2px solid #00aaff;
+    box-shadow: 0 0 10px #00aaff;
+}
+
+.modal-footer .btn-primary:hover {
+    box-shadow: 0 0 20px #00aaff;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #222222;
+    border: 2px solid #00aaff;
+    color: #ffffff;
+    box-shadow: 0 0 5px #00aaff;
+}
+
+.modal-footer .btn-secondary:hover {
+    box-shadow: 0 0 15px #00aaff;
+}
+
 canvas {
     touch-action: none;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }

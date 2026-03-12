@@ -14,13 +14,42 @@ function verMas() {
     const images = JSON.parse(button.getAttribute("data-images"));
     const repo = button.getAttribute("data-repo");
     const download = button.getAttribute("data-download");
+    const visit = button.getAttribute("data-visit");
 
-    // Elementos
+
+    
+   // Download
+  const modalDownload = document.getElementById("modalDownload");
+  if(download && download.trim() !== ""){
+      modalDownload.href = download;
+      modalDownload.download = download;
+      modalDownload.classList.remove("d-none");
+  } else {
+      modalDownload.classList.add("d-none");
+  }
+
+  // Visit
+  const modalVisit = document.getElementById("modalVisit");
+  if(visit && visit.trim() !== ""){
+      modalVisit.href = visit;
+      modalVisit.classList.remove("d-none");
+  } else {
+      modalVisit.classList.add("d-none");
+  }
+  // Repo
+  const modalRepo =   document.getElementById("modalRepo");
+  if(repo && repo.trim() !== ""){
+      modalRepo.href = repo;
+      modalRepo.classList.remove("d-none");
+  } else {
+      modalRepo.classList.add("d-none");
+  }
+
+  // Elementos
     document.getElementById("modalTitle").textContent = title;
     document.getElementById("modalDescription").textContent = description;
-    document.getElementById("modalRepo").href = repo;
-    document.getElementById("modalDownload").href = download;
-    document.getElementById("modalDownload").download = download;
+ 
+
 
     // Carousel
     const carouselInner = document.getElementById("modalCarouselInner");
