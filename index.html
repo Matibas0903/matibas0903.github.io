@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,261 +7,387 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <!-- Devicon -->
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="Style.css">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
   <script src="script.js" defer></script>
 
   <title>Matias Basterra</title>
 </head>
 
-<body class="bg-light">
+<body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg fixed-top colorNav">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-4">
 
+      <ul class="navbar-nav d-flex flex-row gap-4 navbar-links">
+        <li><a class="nav-link text-light" href="#">Inicio</a></li>
+        <li><a class="nav-link text-light" href="#projects">Proyectos</a></li>
+        <li><a class="nav-link text-light" href="#tecnologias">Tecnologías</a></li>
+        <li><a class="nav-link text-light" href="#sobre-mi">Sobre mí</a></li>
+      </ul>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="d-flex align-items-center iconos-navbar">
+        <!-- CV -->
+        <a href="#" id="cvBtn" target="_blank" class="cv-link">
+          <i class="bi bi-file-earmark-arrow-down"></i>
+          <span class="ps-1">CV</span>
+        </a>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contacto</a>
-          </li>
-        </ul>
+        <span class="separador">|</span>
+
+        <div class="d-flex gap-3">
+          <a href="https://github.com/Matibas0903" target="_blank" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/matiasbasterra" target="_blank" title="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a class="email-copy" title="Copiar email">
+            <i class="bi bi-envelope-fill"></i>
+            <span class="copiado">Email copiado</span>
+          </a>
+        </div>
+        <span class="separador">|</span>
       </div>
+
+
     </div>
   </nav>
 
-  <!-- Hero / Banner -->
-  <section class="py-5 mt-5 bg-dark text-white">
+  <!-- Hero -->
+  <section id="hero" class="hero-section">
     <div class="container text-center">
-      <h1 class="display-5 fw-bold">Matias Basterra</h1>
+      <div class="hero-img mx-auto mb-3">
+        <img src="./assets/img/fotoPerfil.jpg" />
+      </div>
 
-
-      <p class="lead mt-3">
-        Estudiante de Desarrollo de Software
+      <h1 class="hero-title">Matias Basterra</h1>
+      <p class="hero-subtitle mt-3">
+        Estudiante de <span class="resaltado">Desarrollo de Software</span> · Buenos Aires, Argentina
       </p>
-      <a href="#projects" class="btn btn-primary btn-lg mt-3">
-        Ver proyectos
-      </a>
+      <p class="hero-desc mt-2">
+        Buscando mi primera oportunidad como Trainee / Junior en el sector IT
+      </p>
+      <div class="d-flex gap-3 justify-content-center mt-4">
+        <a href="#projects" class="btn-hero-primary">
+          Ver proyectos <i class="bi bi-arrow-down ms-1"></i>
+        </a>
+        <a href="https://github.com/Matibas0903" target="_blank" class="btn-hero-outline">
+          <i class="bi bi-github me-1"></i> GitHub
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-5">Proyectos</h2>
+      <h2 class="section-title text-center mb-5">Proyectos</h2>
 
       <div class="row g-4">
-        <!-- Card -->
+
+        <!-- Card: Geven -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Geven.images\Geven 1.png" class="card-img-top" alt="Proyecto 1">
+          <div class="card-proyecto h-100">
+            <img src="Geven.images/Geven 1.png" class="card-img-top" alt="Geven">
             <div class="card-body">
               <h5 class="card-title">Geven - Punto de venta</h5>
-              <p class="card-text">
-                Aplicación WinForms con base de datos local.
-              </p>
+              <p class="card-text">Aplicación WinForms con base de datos local.</p>
+              <div class="tags tecnologia mt-2">
+                <span>C#</span>
+                <span>.NET</span>
+                <span>WinForms</span>
+                <span>SQLite</span>
+                <span>Excel</span>
+              </div>
             </div>
-            <div class="card-footer bg-transparent border-0">
-              <a href="#" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#projectModal"
-                data-title="Sistema de Gestión"
-                data-description="Aplicación WinForms con C#, SQLite, control de stock importacion y exportacion en Excel."
-                data-images='[  "Geven.images/Geven 1.png",
-                                "Geven.images/Geven 2.png",
-                                "Geven.images/Geven 3.png",
-                                "Geven.images/Geven 4.png"]'
+            <div class="card-footer-custom">
+              <a href="#" class="btn-ver-mas w-100" data-bs-toggle="modal" data-bs-target="#projectModal"
+                data-title="Geven - Punto de Venta"
+                data-description="Aplicación WinForms con C#, SQLite, control de stock, importación y exportación en Excel."
+                data-images='["Geven.images/Geven 1.png","Geven.images/Geven 2.png","Geven.images/Geven 3.png","Geven.images/Geven 4.png"]'
                 data-repo="https://github.com/Matibas0903/Geven-Punto-de-Venta" data-download="Geven.Setup.zip">
                 Ver más
               </a>
-
             </div>
           </div>
         </div>
 
-        <!-- Card -->
+        <!-- Card: Menu Web -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Menu_Web\Home.png" class="card-img-top" alt="Proyecto 1">
+          <div class="card-proyecto h-100">
+            <img src="Menu_Web/Home.png" class="card-img-top" alt="Menu Web">
             <div class="card-body">
               <h5 class="card-title">Menu Web</h5>
-              <p class="card-text">
-                Menú web dinámico y fácil de actualizar para restaurantes.
-              </p>
+              <p class="card-text">Menú web dinámico y fácil de actualizar para restaurantes.</p>
+              <div class="tags tecnologia mt-2">
+                <span>PHP</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+                <span>Railway</span>
+
+              </div>
             </div>
-            <div class="card-footer bg-transparent border-0">
-              <a href="#" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#projectModal"
+            <div class="card-footer-custom">
+              <a href="#" class="btn-ver-mas w-100" data-bs-toggle="modal" data-bs-target="#projectModal"
                 data-title="Menu Web"
-                data-description="Desarrollo de un menú web para restaurantes que permite gestionar productos, categorías, promociones y precios mediante un sistema de login seguro. La plataforma facilita la actualización del contenido en tiempo real y optimiza la experiencia de los clientes al navegar por los productos y promociones disponibles."
-                data-images='[  "Menu_Web/Home.png",
-                                "Menu_Web/Login.png",
-                                "Menu_Web/Panel.png",
-                                "Menu_Web/Editar.png"]'
+                data-description="Desarrollo de un menú web para restaurantes que permite gestionar productos, categorías, promociones y precios mediante un sistema de login seguro. La plataforma facilita la actualización del contenido en tiempo real y optimiza la experiencia de los clientes."
+                data-images='["Menu_Web/Home.png","Menu_Web/Login.png","Menu_Web/Panel.png","Menu_Web/Editar.png"]'
                 data-visit="https://menuweb-production.up.railway.app/index.php"
                 data-repo="https://github.com/Matibas0903/MenuWeb">
                 Ver más
               </a>
-
             </div>
           </div>
         </div>
 
-
-        <!-- Card -->
+        <!-- Card: Pac-Man 
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="gamePac-man\InGame.png" class="card-img-top" alt="Proyecto 1">
+          <div class="card-proyecto h-100">
+            <img src="gamePac-man/InGame.png" class="card-img-top" alt="Pac-Man">
             <div class="card-body">
               <h5 class="card-title">Pac-Man Web</h5>
-              <p class="card-text">
-                Juego de Pac-Man en línea, fácil de integrar en cualquier página web.
-              </p>
+              <p class="card-text">Juego de Pac-Man en línea, fácil de integrar en cualquier página web.</p>
+              <div class="tags tecnologia mt-2">
+                <span>HTML5</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Canvas</span>
+              </div>
             </div>
-            <div class="card-footer bg-transparent border-0">
-              <a href="#" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#projectModal"
+            <div class="card-footer-custom">
+              <a href="#" class="btn-ver-mas w-100" data-bs-toggle="modal" data-bs-target="#projectModal"
                 data-title="Pac-Man Web"
-                data-description="Versión web del clásico Pac-Man desarrollada en HTML5, CSS y JavaScript. Se puede implementar fácilmente en cualquier sitio web, adaptándose a distintos tamaños de pantalla. Incluye control de fantasmas, animaciones y un canvas interactivo para disfrutar del juego directamente desde el navegador."
-                data-images='[  "gamePac-man/InGame.png",
-                                "gamePac-man/Victory.png",
-                                "gamePac-man/GameOver.png"]' data-visit="gamePac-man\pacman.html">
+                data-description="Versión web del clásico Pac-Man desarrollada en HTML5, CSS y JavaScript. Se puede implementar fácilmente en cualquier sitio web, adaptándose a distintos tamaños de pantalla. Incluye control de fantasmas, animaciones y un canvas interactivo."
+                data-images='["gamePac-man/InGame.png","gamePac-man/Victory.png","gamePac-man/GameOver.png"]'
+                data-visit="gamePac-man/pacman.html">
                 Ver más
               </a>
-
             </div>
           </div>
         </div>
+        -->
 
-
-
-
-        <!-- Card -->
+        <!-- Card: Profesional 
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Plantilla para Profesional\Plantilla Profesional.png" class="card-img-top" alt="Proyecto 2">
+          <div class="card-proyecto h-100">
+            <img src="Plantilla para Profesional/Plantilla Profesional.png" class="card-img-top"
+              alt="Página Profesional">
             <div class="card-body">
-              <h5 class="card-title">Pagina Web para Profesional</h5>
-              <p class="card-text">
-                Sitio web moderno pensado para que profesionales independientes consigan más clientes online.
-              </p>
+              <h5 class="card-title">Página Web para Profesional</h5>
+              <p class="card-text">Sitio web moderno pensado para que profesionales independientes consigan más clientes
+                online.</p>
+              <div class="tags tecnologia mt-2">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+              </div>
             </div>
-            <div class="card-footer bg-transparent border-0">
-              <a href="Plantilla para Profesional\index.html" class="btn btn-outline-primary w-100">
-
+            <div class="card-footer-custom">
+              <a href="Plantilla para Profesional/index.html" class="btn-ver-mas w-100">
                 Ver más
               </a>
-
             </div>
           </div>
         </div>
+-->
 
-        <!-- Card -->
+        <!-- Card: Catalogo
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Plantilla para Catalogo web\Plantilla-Catalogo-web-1.png" class="card-img-top" alt="Proyecto 3">
-
+          <div class="card-proyecto h-100">
+            <img src="Plantilla para Catalogo web/Plantilla-Catalogo-web-1.png" class="card-img-top" alt="Catálogo Web">
             <div class="card-body">
-              <h5 class="card-title">Catalogo Web</h5>
-              <p class="card-text">
-                Web de catálogo moderna para tiendas, optimizada para móviles y contacto rápido.
-              </p>
+              <h5 class="card-title">Catálogo Web</h5>
+              <p class="card-text">Web de catálogo moderna para tiendas, optimizada para móviles y contacto rápido.</p>
+              <div class="tags tecnologia mt-2">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+                <span>JS</span>
+              </div>
             </div>
-
-            <div class="card-footer bg-transparent border-0">
-              <a href="Plantilla para Catalogo web\index.html" class="btn btn-outline-primary w-100">
+            <div class="card-footer-custom">
+              <a href="Plantilla para Catalogo web/index.html" class="btn-ver-mas w-100">
                 Ver más
               </a>
             </div>
           </div>
         </div>
-
-
-
-
-
 
       </div>
+    </div>
   </section>
+-->
 
-  <!-- Footer -->
-  <footer id="contact" class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="https://github.com/Matibas0903" target="_blank" class="text-white fs-4 me-3"><i
-            class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/matiasbasterra" target="_blank" class="text-white fs-4 me-3"><i
-            class="bi bi-linkedin"></i></a>
-        <a href="mailto:basterramatias2020@gmail.com" class="text-white fs-4"><i class="bi bi-envelope"></i></a>
-      </div>
-      <p class="mb-0">© 2026 - Matias Basterra</p>
-    </div>
-  </footer>
+        <!-- Tecnologías -->
+        <section id="tecnologias" class="py-5">
+          <div class="container">
+            <h2 class="section-title text-center mb-5">Tecnologías</h2>
+            <div class="tech-grid">
 
-  <!-- Project Modal -->
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+                <p>C#</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                <p>PHP</p>
+              </div>
+              <div class="tecnologia-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                <p>JavaScript</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                <p>HTML5</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                <p>CSS3</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+                <p>Bootstrap</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                <p>MySQL</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-plain.svg" />
+                <p>SQLite</p>
+              </div>
+              <div class="tecnologia-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" />
+                <p>SQL Server</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                <p>Git</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                <p>GitHub</p>
+              </div>
+              <div class="tecnologia-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg" />
+                <p>Documentación</p>
+              </div>
 
-  <div class="modal fade" id="projectModal" tabindex="-1">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content rounded-xl">
-
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-
-        <div class="modal-body">
-
-          <!-- Carousel -->
-          <div id="modalCarousel" class="carousel slide mb-4">
-            <div class="carousel-inner" id="modalCarouselInner"></div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
+            </div>
           </div>
+        </section>
 
-          <p id="modalDescription"></p>
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="py-5">
+          <div class="container">
+            <div class="col-md-8 mx-auto">
+              <h2 class="section-title mb-4">Sobre mí</h2>
+              <p>
+                Soy estudiante de la <span class="resaltado">Tecnicatura en Desarrollo de Software</span>, de Buenos
+                Aires,
+                Argentina.
+                Actualmente en búsqueda de empleo en el sector IT como <span class="resaltado">Trainee / Junior</span>.
+              </p>
+              <p>
+                Continúo <span class="resaltado">formándome de manera autodidacta</span>, desarrollando proyectos
+                propios y
+                reforzando mis conocimientos. Busco una oportunidad donde pueda sumar experiencia real, aprender de
+                otros
+                desarrolladores y contribuir con compromiso y dedicación.
+              </p>
+              <p>
+                Me considero una persona responsable, proactiva y con muchas ganas de aprender. Soy detallista y me
+                gusta
+                entender
+                el porqué de las soluciones para tener un mejor panorama del proyecto.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="py-4">
+          <div class="container text-center">
+            <div class="mb-3 d-flex justify-content-center gap-3">
+              <a href="https://github.com/Matibas0903" target="_blank" class="footer-icon"><i
+                  class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/matiasbasterra" target="_blank" class="footer-icon"><i
+                  class="bi bi-linkedin"></i></a>
+              <a href="mailto:basterramatias2020@gmail.com" class="footer-icon"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p class="mb-0 footer-copy">© 2026 · Matias Basterra</p>
+          </div>
+        </footer>
+
+        <!-- Project Modal -->
+        <div class="modal fade" id="projectModal" tabindex="-1">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content modal-custom">
+
+              <div class="modal-header modal-header-custom">
+                <h5 class="modal-title" id="modalTitle"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+
+              <div class="modal-body">
+                <!-- Carousel -->
+                <div id="modalCarousel" class="carousel slide mb-4">
+                  <div class="carousel-inner" id="modalCarouselInner"></div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+                <p id="modalDescription" class="modal-desc"></p>
+              </div>
+
+              <div class="modal-footer modal-footer-custom">
+                <a id="modalRepo" target="_blank" class="btn-modal d-none">
+                  <i class="bi bi-github"></i> Repositorio
+                </a>
+                <a id="modalDownload" class="btn-modal btn-modal-primary d-none" download>
+                  <i class="bi bi-download"></i> Descargar
+                </a>
+                <a id="modalVisit" target="_blank" class="btn-modal btn-modal-outline d-none">
+                  <i class="bi bi-box-arrow-in-right"></i> Visitar
+                </a>
+              </div>
+
+            </div>
+          </div>
         </div>
 
-        <div class="modal-footer">
-          <a id="modalRepo" target="_blank" class="btn btn-dark d-none">
-            <i class="bi bi-github"></i> Repositorio
-          </a>
-
-          <a id="modalDownload" class="btn btn-primary d-none" download>
-            <i class="bi bi-download"></i> Descargar
-          </a>
-
-          <a id="modalVisit" target="_blank" class="btn btn-light d-none">
-            <i class="bi bi-box-arrow-in-right"></i> Visitar
-          </a>
-
-
+        <!-- modal cv no disponible-->
+        <div class="modal fade" id="cvModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom text-center p-4">
+              <div class="mb-3" style="font-size: 2.5rem;">🚧</div>
+              <h5 class="modal-title mb-2" style="font-family:'Sora',sans-serif; color:#fff;">CV no disponible aún</h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Estoy trabajando en ello. Mientras tanto podés contactarme por LinkedIn o por email.
+              </p>
+              <button type="button" class="btn-hero-primary mt-3 mx-auto" data-bs-dismiss="modal">Entendido</button>
+            </div>
+          </div>
         </div>
-
-      </div>
-    </div>
-  </div>
-
-
-
 </body>
 
 </html>
